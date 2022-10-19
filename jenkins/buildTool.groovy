@@ -5,3 +5,5 @@ def preBuild() {
 def buildDockerImage() {
     echo "build Docker image"
 }
+
+return this

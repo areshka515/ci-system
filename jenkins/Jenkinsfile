@@ -19,5 +19,13 @@ pipeline {
                 }
             }
         }
+
+        stage("Run Docker Image") {
+            steps {
+                script {
+                    buildTool.runDockerImage();
+                }
+            }
+        }
     }
 }

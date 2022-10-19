@@ -9,7 +9,7 @@ def buildDockerImage() {
     sh("docker build -t $IMAGE_NAME -f src/Dockerfile src")
 }
 
-def buildDockerImage() {
+def runDockerImage() {
     echo "Running image..."
     sh("docker run $IMAGE_NAME")
 }

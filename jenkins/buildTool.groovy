@@ -15,7 +15,8 @@ def runDockerImage() {
 }
 
 def clearCache() {
-    sh("docker rmi -f $IMAGE_NAME")
+    echo "Clearing Cache"
+    sh("docker rmi -f $IMAGE_NAME || true")
 }
 
 return this

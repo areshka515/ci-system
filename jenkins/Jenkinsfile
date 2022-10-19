@@ -31,7 +31,9 @@ pipeline {
 
     post {
         always {
-            buildTool.clearCache();
+            script {
+                buildTool.clearCache();
+            }
         }
     }
 }

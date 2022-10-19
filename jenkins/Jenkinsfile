@@ -6,8 +6,8 @@ pipeline {
         stage("Pre Build") {
             steps {
                 script {
-                    tool = load("jenkins/buildTool.groovy");
-                    tool.preBuild();
+                    buildTool = load("jenkins/buildTool.groovy");
+                    buildTool.preBuild();
                 }
             }
         }
@@ -15,7 +15,7 @@ pipeline {
         stage("Build Docker Image") {
             steps {
                 script {
-                    tool.buildDockerImage();
+                    buildTool.buildDockerImage();
                 }
             }
         }

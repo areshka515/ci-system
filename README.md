@@ -1,2 +1,1 @@
-# ci-system
-A simple CI system using Jenkins
+# Please checkout master branch

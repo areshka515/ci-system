@@ -1,0 +1,23 @@
+def buildTool
+
+pipeline {
+    agent any;
+    stages {
+        stage("Pre Build") {
+            steps {
+                script {
+                    tool = load("jenkins/buildTool.groovy");
+                    tool.preBuild();
+                }
+            }
+        }
+
+        stage("Build Docker Image") {
+            steps {
+                script {
+                    tool.buildDockerImage();
+                }
+            }
+        }
+    }
+}
